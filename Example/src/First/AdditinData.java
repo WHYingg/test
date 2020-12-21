@@ -8,9 +8,9 @@ import java.sql.Statement;
 public class AdditinData {
 	public static final String DBDRIVER="com.mysql.cj.jdbc.Driver";
 	public static final String DBURL="jdbc:mysql://localhost:3306/why?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true";
-	//MySQLÊı¾İ¿âµÄÁ¬½ÓÓÃ»§Ãû
+	//MySQLæ•°æ®åº“çš„è¿æ¥ç”¨æˆ·å
 	public static final String DBUSER="root";
-	//Êı¾İ¿âÁ¬½ÓÃÜÂë
+	//æ•°æ®åº“è¿æ¥å¯†ç 
 	public static final String DBPASS="root";
 	public static final void main(String []args) {
 		Connection conn=null;
@@ -24,14 +24,15 @@ public class AdditinData {
 		try {
 			conn=DriverManager.getConnection(DBURL,DBUSER,DBPASS);
 			stmt=conn.createStatement();
-			stmt.executeUpdate("INSERT INTO MyTable VALUES('1000','ÍõÒ»','Å®','40','¸ß','4000','·ñ')");
-			stmt.executeUpdate("INSERT INTO MyTable VALUES('1001','Íõ¶ş','ÄĞ','19','ÖĞ','2999','·ñ')");
-			stmt.executeUpdate("INSERT INTO MyTable VALUES('1002','ÍõÈı','Å®','33','¸ß','5100','ÊÇ')");
-			stmt.executeUpdate("INSERT INTO MyTable VALUES('1003','ÍõËÄ','ÄĞ','55','µÍ','3900','·ñ')");
-			stmt.executeUpdate("INSERT INTO MyTable VALUES('1004','ÍõÎå','Å®','42','ÖĞ','3123','·ñ')");
-			stmt.executeUpdate("INSERT INTO MyTable VALUES('1005','ÍõÁù','ÄĞ','32','ÖĞ','3560','·ñ')");
-			stmt.executeUpdate("INSERT INTO MyTable VALUES('1006','ÍõÆß','ÄĞ','69','¸ß','6100','ÊÇ')");
-			stmt.executeUpdate("INSERT INTO MyTable VALUES('1007','Íõ¾Å','Å®','49','¸ß','5200','ÊÇ')");
+			stmt.executeUpdate("INSERT INTO MyTable VALUES('1000','ç‹ä¸€','å¥³','40','é«˜','4000','å¦')");
+			stmt.executeUpdate("INSERT INTO MyTable VALUES('1001','ç‹äºŒ','ç”·','19','ä¸­','2999','å¦')");
+			stmt.executeUpdate("INSERT INTO MyTable VALUES('1002','ç‹ä¸‰','å¥³','33','é«˜','5100','æ˜¯')");
+			stmt.executeUpdate("INSERT INTO MyTable VALUES('1003','ç‹å››','ç”·','55','ä½','3900','å¦')");
+			stmt.executeUpdate("INSERT INTO MyTable VALUES('1004','ç‹äº”','å¥³','42','ä¸­','3123','å¦')");
+			stmt.executeUpdate("INSERT INTO MyTable VALUES('1005','ç‹å…­','ç”·','32','ä¸­','3560','å¦')");
+			stmt.executeUpdate("INSERT INTO MyTable VALUES('1006','ç‹ä¸ƒ','ç”·','69','é«˜','6100','æ˜¯')");
+			stmt.executeUpdate("INSERT INTO MyTable VALUES('1007','ç‹ä¹','å¥³','49','é«˜','5200','æ˜¯')");
+			stmt.executeUpdate("INSERT INTO MyTable VALUES('1008','ç‹å','ç”·','59','é«˜','5300','æ˜¯')");
 
 		}catch(SQLException e) {
 			e.printStackTrace();
